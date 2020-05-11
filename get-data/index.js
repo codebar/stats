@@ -13,14 +13,15 @@ const run_query = (path_to_sql_file) =>
 
 async function main() {
   try {
-    console.log("Running counted_stats query");
     /**
-     * Query for counting the number of
-     *  coaches
-     *  students
-     *  chapters
-     *  workshops
-     *  monthlies
+     * Count all-time numbers for the coaches, students, chapters, workshops and monthlies
+     * @type {
+     *  coach_count: int,
+     *  student_count: int,
+     *  chapter_count: int,
+     *  workshop_count: int,
+     *  monthlies_count: int
+     * }
      */
     const [counted_stats] = await run_query("./counted_stats.sql");
 
@@ -31,12 +32,11 @@ async function main() {
 
     console.log("counted_stats.json saved!");
 
-    console.log("Running attended_per_year query");
-
     /**
      * Find the number students that attended workshops per year
+     * @type Array<{ count: int, year: int }>
      */
-    const [attended_per_year] = await run_query("./attended_per_year.sql");
+    const attended_per_year = await run_query("./attended_per_year.sql");
 
     await fsPromises.writeFile(
       "attended_per_year.json",
@@ -44,6 +44,42 @@ async function main() {
     );
 
     console.log("attended_per_year.json saved!");
+
+    /**
+     * Find the number and percentage of returning members (includes both coaches and students)
+     * @type {
+     *  returning_members_count: int,
+     *  attending_members_count: int,
+     *  percentage_returning: float
+     * }
+     */
+    const [returning_members] = await run_query("./returning_members.sql");
+
+    await fsPromises.writeFile(
+      "returning_members.json",
+      JSON.stringify(returning_members, null, 2)
+    );
+
+    console.log("returning_members.json saved!");
+
+    /**
+     * Find the number and percentage of members that have converted from students to coaches
+     * @type {
+     *  student_only_members_count: int,
+     *  coach_and_student_members_count: int,
+     *  student_to_coach_conversion: float
+     * }
+     */
+    const [student_to_coach_conversion] = await run_query(
+      "./student_to_coach_conversion.sql"
+    );
+
+    await fsPromises.writeFile(
+      "student_to_coach_conversion.json",
+      JSON.stringify(student_to_coach_conversion, null, 2)
+    );
+
+    console.log("student_to_coach_conversion.json saved!");
 
     process.exit(0);
   } catch (e) {
