@@ -1,5 +1,13 @@
 /*! purgecss start ignore */
 @tailwind base;
 @tailwind components;
+
+h1 {
+  @apply my-8 text-4xl font-bold;
+}
+
+p {
+  @apply my-2;
+}
 /*! purgecss end ignore */
 @tailwind utilities;
