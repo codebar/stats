@@ -12,7 +12,13 @@ The website then displays that data.
 yarn data
 ```
 
-See what queries are run [here](./get-data)
+See what queries are run [here](./get-data).
+
+**Note** that to run this script locally you'll need a `.env` file in the root of the repo, which needs to looks like this:
+
+```sh
+DB_URL=<databse-url>
+```
 
 ## Run the frontend
 
