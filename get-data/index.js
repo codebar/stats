@@ -39,7 +39,7 @@ async function main() {
 
     /**
      * Find the number students that attended workshops per year
-     * @type Array<{ count: int, year: int }>
+     * @type Array<{ count: int, year: string }>
      */
     const attended_per_year = await run_query("./attended_per_year.sql");
 
@@ -73,6 +73,8 @@ async function main() {
       "student_to_coach_conversion.json",
       student_to_coach_conversion
     );
+
+    await saveData("last_updated_at.json", { last_updated_at: new Date() });
 
     process.exit(0);
   } catch (e) {
