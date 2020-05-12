@@ -2,6 +2,8 @@
   "private": true,
   "scripts": {
     "start": "yarn workspace www start",
+    "build": "yarn workspace www build",
+    "analyze": "yarn workspace www analyze",
     "data": "node get-data/index.js"
   },
   "workspaces": [
