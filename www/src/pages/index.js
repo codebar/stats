@@ -2,6 +2,34 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import lastUpdateAt from "../data/last_updated_at.json";
+import countedStats from "../data/counted_stats.json";
+import returningMembers from "../data/returning_members.json";
+import studentCoachConversion from "../data/student_to_coach_conversion.json";
+import attendedPerYear from "../data/attended_per_year.json";
+import { ColumnChart } from "react-chartkick";
+import "chart.js";
+
+const data = {
+  ...countedStats,
+  ...returningMembers,
+  ...studentCoachConversion,
+};
+
+const attendedPerYearChart = attendedPerYear.map(({ count, year }) => [
+  year.toString(),
+  count,
+]);
+
+const dataDisplay = [
+  { property: "coach_count", title: "Coaches" },
+  { property: "student_count", title: "Students" },
+  { property: "chapter_count", title: "Chapters" },
+  { property: "workshop_count", title: "Workshops" },
+  { property: "monthlies_count", title: "Monthlies" },
+  { property: "percentage_returning", title: "Returning Members %" },
+  { property: "student_to_coach_conversion", title: "Students > Coaches %" },
+];
 
 function IndexPage() {
   return (
@@ -12,11 +40,25 @@ function IndexPage() {
       />
 
       <section>
-        <h2 className="inline-block mb-4 text-3xl font-bold">Statistics</h2>
-
-        <p className="leading-loose">
-          Last updated: {new Date().toLocaleDateString()}
+        <p className="text-sm font-semibold text-gray-800">
+          Last updated:{" "}
+          {new Date(lastUpdateAt.last_updated_at).toLocaleDateString()}
         </p>
+        <h1>Overview</h1>
+        <dl className="grid sm:grid-cols-3 gap-6">
+          {dataDisplay.map((item) => (
+            <div key={item.property}>
+              <dd className="text-5xl font-extrabold leading-none text-blue-500">
+                {data[item.property].toLocaleString()}
+              </dd>
+              <dt className="mt-2 text-lg font-medium text-gray-700 leading-6">
+                {item.title}
+              </dt>
+            </div>
+          ))}
+        </dl>
+        <h1>Workshop attendances per year</h1>
+        <ColumnChart data={attendedPerYearChart} />
       </section>
     </Layout>
   );
