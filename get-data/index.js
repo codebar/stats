@@ -39,7 +39,7 @@ async function main() {
 
     /**
      * Find the number students that attended workshops per year
-     * @type Array<{ count: int, year: string }>
+     * @type Array<{ count: int, year: int }>
      */
     const attended_per_year = await run_query("./attended_per_year.sql");
 
