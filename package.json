@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "yarn workspace www start",
+    "data": "node get-data/index.js"
+  },
+  "workspaces": [
+    "www",
+    "get-data"
+  ]
+}
