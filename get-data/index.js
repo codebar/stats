@@ -5,6 +5,7 @@ const postgres = require("postgres");
 
 const sql = postgres(process.env.DB_URL, {
   ssl: { rejectUnauthorized: false },
+  max: 1,
 });
 
 // Helper for running queries from `.sql` files
