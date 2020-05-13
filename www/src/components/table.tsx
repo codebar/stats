@@ -24,8 +24,8 @@ export const Table = ({
             </tr>
           </thead>
           <tbody className="bg-white">
-            {rows.map((row) => (
-              <tr>
+            {rows.map((row, i) => (
+              <tr key={i}>
                 {row.map((tableItem) => (
                   <td
                     key={tableItem}
