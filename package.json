@@ -2,7 +2,6 @@
   "private": true,
   "scripts": {
     "start": "yarn workspace www start",
-    "install-www": "yarn workspace www install",
     "build": "yarn workspace www build",
     "type-check": "yarn workspace www type-check",
     "analyze": "yarn workspace www analyze",
