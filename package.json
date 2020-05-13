@@ -5,6 +5,7 @@
     "install-www": "yarn workspace www install",
     "build": "yarn workspace www build",
     "build-gh-pages": "yarn workspace www build-gh-pages",
+    "type-check": "yarn workspace www type-check",
     "analyze": "yarn workspace www analyze",
     "data": "node get-data/index.js"
   },
