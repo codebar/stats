@@ -110,17 +110,17 @@ function IndexPage() {
           ))}
         </dl>
         <h1>Workshop attendances per year</h1>
-        <BarChart
-          data={attendedPerYearChart}
-          stacked
-          colors={[colors.blue["500"], colors.pink["600"]]}
-        />
-        <div className="mt-8"></div>
-        <Table
-          headers={["Year", "Attendances", "Growth"]}
-          rows={attendedPerYearTable}
-        />
-        <div className="mt-8"></div>
+        <div className="space-y-12">
+          <BarChart
+            data={attendedPerYearChart}
+            stacked
+            colors={[colors.blue["500"], colors.pink["600"]]}
+          />
+          <Table
+            headers={["Year", "Attendances", "Growth %"]}
+            rows={attendedPerYearTable}
+          />
+        </div>
       </section>
     </Layout>
   );
