@@ -2,7 +2,7 @@
 
 This repo contains a [script](./get-data/index.js) for running SQL queries against the codebar Postgres database.
 
-The script writes the result of the queries to the [data](./www/src/data) directory within the front end.
+The script writes the result of the queries to the [data](./www/data) directory within the front end.
 
 The website then displays that data.
 
