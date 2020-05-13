@@ -27,7 +27,7 @@ jobs:
       - run: yarn install-www
       - run: yarn analyze
       - run: yarn type-check
-      - run: yarn build-gh-pages
+      - run: yarn build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

@@ -4,7 +4,6 @@ const tailwindConfig = require("./tailwind.config.js");
 const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
-  pathPrefix: "/stats-api",
   siteMetadata: {
     title: `codebar stats`,
     description: `Statistics for codebar`,
