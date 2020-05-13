@@ -38,8 +38,8 @@ async function main() {
     await saveData("counted_stats.json", counted_stats);
 
     /**
-     * Find the number students that attended workshops per year
-     * @type Array<{ count: int, year: int }>
+     * Find the number of coaches and students that attended workshops per year
+     * @type Array<{ students: int, coaches: int, year: int }>
      */
     const attended_per_year = await run_query("./attended_per_year.sql");
 
