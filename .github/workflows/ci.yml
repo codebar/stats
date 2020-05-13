@@ -1,7 +1,7 @@
 on: [pull_request]
 
 jobs:
-  lint:
+  analyze:
     runs-on: ubuntu-latest
     name: Run eslint
     steps:
@@ -10,17 +10,7 @@ jobs:
         with:
           node-version: "13.x"
       - run: yarn
-      - run: yarn analyze:lint
-  prettier:
-    runs-on: ubuntu-latest
-    name: Check formatting
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "13.x"
-      - run: yarn
-      - run: yarn analyze:prettier
+      - run: yarn analyze
   typescript:
     runs-on: ubuntu-latest
     name: Check types
