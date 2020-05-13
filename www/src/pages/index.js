@@ -7,8 +7,9 @@ import countedStats from "../data/counted_stats.json";
 import returningMembers from "../data/returning_members.json";
 import studentCoachConversion from "../data/student_to_coach_conversion.json";
 import attendedPerYear from "../data/attended_per_year.json";
-import { ColumnChart } from "react-chartkick";
+import { BarChart } from "react-chartkick";
 import "chart.js";
+import { colors } from "tailwindcss/defaultTheme";
 
 const data = {
   ...countedStats,
@@ -16,11 +17,22 @@ const data = {
   ...studentCoachConversion,
 };
 
-const attendedPerYearChart = attendedPerYear.map(({ count, year }) => [
-  year.toString(),
-  count,
-]);
-
+const attendedPerYearChart = [
+  {
+    name: "Students",
+    data: attendedPerYear.map(({ students, year }) => [
+      year.toString(),
+      students,
+    ]),
+  },
+  {
+    name: "Coaches",
+    data: attendedPerYear.map(({ coaches, year }) => [
+      year.toString(),
+      coaches,
+    ]),
+  },
+];
 const dataDisplay = [
   { property: "coach_count", title: "Coaches" },
   { property: "student_count", title: "Students" },
@@ -58,7 +70,11 @@ function IndexPage() {
           ))}
         </dl>
         <h1>Workshop attendances per year</h1>
-        <ColumnChart data={attendedPerYearChart} />
+        <BarChart
+          data={attendedPerYearChart}
+          stacked
+          colors={[colors.blue["500"], colors.pink["500"]]}
+        />
       </section>
     </Layout>
   );
