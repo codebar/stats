@@ -25,7 +25,6 @@
     "fix:prettier": "prettier --write \"src/**/*.{css,js,jsx,ts,tsx,json,md}\"",
     "fix": "npm run fix:lint && npm run fix:prettier",
     "build": "gatsby build",
-    "build-gh-pages": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "dev": "npm run develop",
     "start": "npm run develop",
