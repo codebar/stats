@@ -2,11 +2,11 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import lastUpdateAt from "../data/last_updated_at.json";
-import countedStats from "../data/counted_stats.json";
-import returningMembers from "../data/returning_members.json";
-import studentCoachConversion from "../data/student_to_coach_conversion.json";
-import attendedPerYear from "../data/attended_per_year.json";
+import lastUpdateAt from "../../data/last_updated_at.json";
+import countedStats from "../../data/counted_stats.json";
+import returningMembers from "../../data/returning_members.json";
+import studentCoachConversion from "../../data/student_to_coach_conversion.json";
+import attendedPerYear from "../../data/attended_per_year.json";
 import { BarChart } from "react-chartkick";
 import "chart.js";
 import { colors } from "tailwindcss/defaultTheme";
@@ -47,7 +47,14 @@ function IndexPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[
+          `gatsby`,
+          `tailwind`,
+          `react`,
+          `tailwindcss`,
+          `codebar`,
+          `stats`,
+        ]}
         title="Home"
       />
 
@@ -73,7 +80,7 @@ function IndexPage() {
         <BarChart
           data={attendedPerYearChart}
           stacked
-          colors={[colors.blue["500"], colors.pink["500"]]}
+          colors={[colors.blue["500"], colors.pink["600"]]}
         />
       </section>
     </Layout>

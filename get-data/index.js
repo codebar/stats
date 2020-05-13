@@ -14,7 +14,7 @@ const run_query = (path_to_sql_file) =>
 
 const saveData = async (fileName, data) => {
   await fsPromises.writeFile(
-    path.join(__dirname, `../www/src/data/${fileName}`),
+    path.join(__dirname, `../www/data/${fileName}`),
     JSON.stringify(data, null, 2)
   );
 
