@@ -19,6 +19,7 @@ function Header() {
         <Link to="/">
           <h1 className="flex items-center no-underline text-blue-600">
             <img
+              alt="icon"
               className="w-16 h-16 mr-2 "
               src={require("../images/code-bar-icon.png")}
             />
