@@ -18,13 +18,19 @@ yarn data
 DB_URL=<databse-url>
 ```
 
-## Run the frontend
+## Start the frontend
 
 ```sh
 yarn start
 ```
 
 See more [here](./www)
+
+## How to deploy?
+
+Simply pushing to `master` will trigger Github Actions to run checks and then deploy to Github Pages.
+
+Read more [here](./www/README.md).
 
 ## TODO
 
