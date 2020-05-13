@@ -1,34 +1,42 @@
 [
   {
-    "count": 104,
+    "students": 104,
+    "coaches": 0,
     "year": 2013
   },
   {
-    "count": 1840,
+    "students": 1840,
+    "coaches": 952,
     "year": 2014
   },
   {
-    "count": 3274,
+    "students": 3274,
+    "coaches": 1661,
     "year": 2015
   },
   {
-    "count": 3425,
+    "students": 3425,
+    "coaches": 1729,
     "year": 2016
   },
   {
-    "count": 3594,
+    "students": 3594,
+    "coaches": 2143,
     "year": 2017
   },
   {
-    "count": 4757,
+    "students": 4757,
+    "coaches": 2939,
     "year": 2018
   },
   {
-    "count": 5674,
+    "students": 5674,
+    "coaches": 3552,
     "year": 2019
   },
   {
-    "count": 1552,
+    "students": 1557,
+    "coaches": 1032,
     "year": 2020
   }
 ]
