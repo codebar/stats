@@ -52,10 +52,6 @@ const attendedPerYearTable: string[][] = attendedPerYear
 
     const currentYearAttending = item.coaches + item.students;
     const previousYearAttending = previousYear.coaches + previousYear.students;
-    console.log({
-      previousYearAttending,
-      currentYearAttending,
-    });
     const percentageChange =
       (currentYearAttending / previousYearAttending) * 100 - 100;
     return [
