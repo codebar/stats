@@ -1,0 +1,37 @@
+[
+  {
+    "coachcount": 203,
+    "studentcount": 464,
+    "year": 2014
+  },
+  {
+    "coachcount": 215,
+    "studentcount": 711,
+    "year": 2015
+  },
+  {
+    "coachcount": 417,
+    "studentcount": 813,
+    "year": 2016
+  },
+  {
+    "coachcount": 615,
+    "studentcount": 1509,
+    "year": 2017
+  },
+  {
+    "coachcount": 1000,
+    "studentcount": 2408,
+    "year": 2018
+  },
+  {
+    "coachcount": 1203,
+    "studentcount": 2870,
+    "year": 2019
+  },
+  {
+    "coachcount": 372,
+    "studentcount": 872,
+    "year": 2020
+  }
+]
