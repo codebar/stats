@@ -12,6 +12,7 @@ import returningMembers from "../../data/returning_members.json";
 import studentCoachConversion from "../../data/student_to_coach_conversion.json";
 import attendedPerYear from "../../data/attended_per_year.json";
 import newSignUpsPerYear from "../../data/new_signups.json";
+import workshopsPerYear from "../../data/workshops_per_year.json";
 
 type Data = {
   coach_count: number;
@@ -46,7 +47,7 @@ const attendedPerYearChart = [
   },
 ];
 
-const newSignUpsPerYeaChart = [
+const newSignUpsPerYearChart = [
   {
     name: "Students",
     data: newSignUpsPerYear.map(({ studentcount, year }) => [
@@ -59,6 +60,16 @@ const newSignUpsPerYeaChart = [
     data: newSignUpsPerYear.map(({ coachcount, year }) => [
       year.toString(),
       coachcount,
+    ]),
+  },
+];
+
+const workshopsPerYearChart = [
+  {
+    name: "Workshops",
+    data: workshopsPerYear.map(({ count, year }) => [
+      year.toString(),
+      count,
     ]),
   },
 ];
@@ -124,8 +135,14 @@ function IndexPage() {
           ))}
         </dl>
         <h1>Workshops</h1>
-        <h3>Workshop attendances per year</h3>
+
         <div className="space-y-12">
+          <h3>Workshops per year</h3>
+          <ColumnChart
+            data={workshopsPerYearChart}
+            colors={[colors.blue["600"]]}
+          />
+          <h3>Workshop attendances per year</h3>
           <BarChart
             data={attendedPerYearChart}
             stacked
@@ -141,7 +158,7 @@ function IndexPage() {
         <h3>New members per year</h3>
         <div className="space-y-12">
           <ColumnChart
-            data={newSignUpsPerYeaChart}
+            data={newSignUpsPerYearChart}
             stacked
             colors={[colors.blue["500"], colors.pink["600"]]}
           />

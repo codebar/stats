@@ -46,6 +46,14 @@ async function main() {
     await saveData("attended_per_year.json", attended_per_year);
 
     /**
+     * Find the number of workshops per year
+     * @type Array<{ count: int, year: int }>
+     */
+    const workshops_per_year = await run_query("./workshops_per_year.sql");
+
+    await saveData("workshops_per_year.json", workshops_per_year);
+
+    /**
      * Find the number and percentage of returning members (includes both coaches and students)
      * @type {
      *  returning_members_count: int,
