@@ -74,6 +74,14 @@ async function main() {
       student_to_coach_conversion
     );
 
+    /**
+     * Find the number of new sign ups per year
+     * @type Array<{ student_count: int, coach_count: int, year: int }>
+     */
+    const new_signups_per_year = await run_query("./new_signups.sql");
+
+    await saveData("new_signups.json", new_signups_per_year);
+
     await saveData("last_updated_at.json", { last_updated_at: new Date() });
 
     process.exit(0);
