@@ -19,6 +19,7 @@ type Data = {
   chapter_count: number;
   workshop_count: number;
   monthlies_count: number;
+  events_count: number;
   percentage_returning: number;
   student_to_coach_conversion: number;
 };
@@ -85,6 +86,7 @@ const dataDisplay = [
   { property: "chapter_count", title: "Chapters" },
   { property: "workshop_count", title: "Workshops" },
   { property: "monthlies_count", title: "Monthlies" },
+  { property: "events_count", title: "Other Events" },
   { property: "percentage_returning", title: "Returning Members %" },
   { property: "student_to_coach_conversion", title: "Students > Coaches %" },
 ];

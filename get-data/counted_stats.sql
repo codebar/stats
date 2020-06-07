@@ -27,15 +27,21 @@ WITH coach_count AS (
     SELECT count(id) FROM meetings
 )
 
-SELECT 
+, events_count AS (
+    SELECT count(id) FROM events
+)
+
+SELECT
     coach_count.count AS coach_count
-    , student_count.count AS student_count 
-    , chapter_count.count AS chapter_count 
+    , student_count.count AS student_count
+    , chapter_count.count AS chapter_count
     , workshop_count.count AS workshop_count
     , monthlies_count.count AS monthlies_count
-FROM 
+    , events_count.count AS events_count
+FROM
     coach_count
     , student_count
     , chapter_count
     , workshop_count
-    , monthlies_count;
+    , monthlies_count
+    , events_count;
