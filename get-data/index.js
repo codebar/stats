@@ -30,7 +30,9 @@ async function main() {
      *  student_count: int,
      *  chapter_count: int,
      *  workshop_count: int,
-     *  monthlies_count: int
+     *  monthlies_count: int,
+     *  events_count: int,
+     *  busiest_month: int
      * }
      */
     const [counted_stats] = await run_query("./counted_stats.sql");

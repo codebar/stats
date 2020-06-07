@@ -22,6 +22,7 @@ type Data = {
   monthlies_count: number;
   percentage_returning: number;
   student_to_coach_conversion: number;
+  busiest_month: number;
 };
 
 const data: Data = {
@@ -66,11 +67,8 @@ const newSignUpsPerYearChart = [
 
 const workshopsPerYearChart = [
   {
-    name: "Workshops",
-    data: workshopsPerYear.map(({ count, year }) => [
-      year.toString(),
-      count,
-    ]),
+    name: "Workshops per year",
+    data: workshopsPerYear.map(({ count, year }) => [year.toString(), count]),
   },
 ];
 
@@ -99,6 +97,21 @@ const dataDisplay = [
   { property: "percentage_returning", title: "Returning Members %" },
   { property: "student_to_coach_conversion", title: "Students > Coaches %" },
 ];
+
+const monthMap = new Map([
+  [1, "January ❄️"],
+  [2, "February 💝"],
+  [3, "March 🌼"],
+  [4, "April 🐣"],
+  [5, "May 🌸"],
+  [6, "June 🌞"],
+  [7, "July 🍦"],
+  [8, "August 🦋"],
+  [9, "September 🍂"],
+  [10, "October 🎃"],
+  [11, "November 🍂"],
+  [12, "December 🎄"],
+]);
 
 function IndexPage() {
   return (
@@ -134,14 +147,36 @@ function IndexPage() {
             </div>
           ))}
         </dl>
-        <h1>Workshops</h1>
 
+        <h1>Workshops</h1>
         <div className="space-y-12">
-          <h3>Workshops per year</h3>
-          <ColumnChart
-            data={workshopsPerYearChart}
-            colors={[colors.blue["600"]]}
-          />
+          <div className="flex">
+            <div className="flex-grow bg-gray-200 px-4 py-2 m-2">
+              <ColumnChart
+                data={workshopsPerYearChart}
+                colors={[colors.blue["600"]]}
+              />
+            </div>
+            <dl className="grid sm:grid-cols-2 gap-6 m-2 text-center">
+              <div>
+                <dd className="text-3xl font-extrabold leading-none text-blue-500">
+                  {countedStats.workshop_count}
+                </dd>
+                <dt className="mt-2 font-medium text-gray-700 leading-6">
+                  All workshops
+                </dt>
+              </div>
+              <div>
+                <dd className="text-3xl font-extrabold leading-none text-blue-500">
+                  {monthMap.get(countedStats.busiest_month)}
+                </dd>
+                <dt className="mt-2 font-medium text-gray-700 leading-6">
+                  Busiest month
+                </dt>
+              </div>
+            </dl>
+          </div>
+
           <h3>Workshop attendances per year</h3>
           <BarChart
             data={attendedPerYearChart}
