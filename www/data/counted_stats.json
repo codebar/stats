@@ -1,8 +1,9 @@
 {
-  "coach_count": 4589,
+  "coach_count": 4590,
   "student_count": 11590,
   "chapter_count": 27,
   "workshop_count": 1369,
   "monthlies_count": 49,
-  "busiest_month": 5
+  "busiest_month": 5,
+  "slowest_month": 12
 }

@@ -33,6 +33,7 @@ async function main() {
      *  monthlies_count: int,
      *  events_count: int,
      *  busiest_month: int
+     *  slowest_month: int
      * }
      */
     const [counted_stats] = await run_query("./counted_stats.sql");

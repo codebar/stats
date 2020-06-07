@@ -106,11 +106,11 @@ const monthMap = new Map([
   [5, "May 🌸"],
   [6, "June 🌞"],
   [7, "July 🍦"],
-  [8, "August 🦋"],
-  [9, "September 🍂"],
+  [8, "Aug 🦋"],
+  [9, "Sept 🍂"],
   [10, "October 🎃"],
-  [11, "November 🍂"],
-  [12, "December 🎄"],
+  [11, "Nov 🍂"],
+  [12, "Dec 🎄"],
 ]);
 
 function IndexPage() {
@@ -157,7 +157,7 @@ function IndexPage() {
                 colors={[colors.blue["600"]]}
               />
             </div>
-            <dl className="grid sm:grid-cols-2 gap-6 m-2 text-center">
+            <dl className="grid sm:grid-cols-2 gap-6 m-2 text-center items-center">
               <div>
                 <dd className="text-3xl font-extrabold leading-none text-blue-500">
                   {countedStats.workshop_count}
@@ -172,6 +172,14 @@ function IndexPage() {
                 </dd>
                 <dt className="mt-2 font-medium text-gray-700 leading-6">
                   Busiest month
+                </dt>
+              </div>
+              <div>
+                <dd className="text-3xl font-extrabold leading-none text-blue-500">
+                  {monthMap.get(countedStats.slowest_month)}
+                </dd>
+                <dt className="mt-2 font-medium text-gray-700 leading-6">
+                  Slowest month
                 </dt>
               </div>
             </dl>

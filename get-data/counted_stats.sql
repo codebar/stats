@@ -35,6 +35,14 @@ WITH coach_count AS (
    ORDER BY count DESC limit 1
 )
 
+, slowest_month AS (
+  SELECT count(workshops.id)
+  , extract(month FROM workshops.date_and_time)  as month
+  FROM workshops
+  GROUP BY extract(month FROM workshops.date_and_time)
+  ORDER BY count ASC limit 1
+)
+
 SELECT
     coach_count.count AS coach_count
     , student_count.count AS student_count
@@ -42,6 +50,7 @@ SELECT
     , workshop_count.count AS workshop_count
     , monthlies_count.count AS monthlies_count
     , busiest_month.month AS busiest_month
+    , slowest_month.month AS slowest_month
 
 FROM
     coach_count
@@ -49,4 +58,5 @@ FROM
     , chapter_count
     , workshop_count
     , monthlies_count
-    , busiest_month;
+    , busiest_month
+    , slowest_month;
