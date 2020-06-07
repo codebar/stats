@@ -30,7 +30,10 @@ async function main() {
      *  student_count: int,
      *  chapter_count: int,
      *  workshop_count: int,
-     *  monthlies_count: int
+     *  monthlies_count: int,
+     *  events_count: int,
+     *  busiest_month: int
+     *  slowest_month: int
      * }
      */
     const [counted_stats] = await run_query("./counted_stats.sql");
@@ -44,6 +47,14 @@ async function main() {
     const attended_per_year = await run_query("./attended_per_year.sql");
 
     await saveData("attended_per_year.json", attended_per_year);
+
+    /**
+     * Find the number of workshops per year
+     * @type Array<{ count: int, year: int }>
+     */
+    const workshops_per_year = await run_query("./workshops_per_year.sql");
+
+    await saveData("workshops_per_year.json", workshops_per_year);
 
     /**
      * Find the number and percentage of returning members (includes both coaches and students)

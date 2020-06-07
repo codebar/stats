@@ -20,7 +20,7 @@
     "analyze:lint": "eslint src --ext .ts,.tsx",
     "analyze:prettier": "prettier --list-different \"src/**/*.{css,js,jsx,ts,tsx,json,md}\"",
     "analyze": "npm run analyze:lint && npm run analyze:prettier",
-    "fix:lint": "eslint --ext .jsx --ext .js src --fix",
+    "fix:lint": "eslint --ext .jsx --ext .js src/**/* --fix",
     "fix:prettier": "prettier --write \"src/**/*.{css,js,jsx,ts,tsx,json,md}\"",
     "fix": "npm run fix:lint && npm run fix:prettier",
     "build": "gatsby build",
