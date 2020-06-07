@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart } from "react-chartkick";
+import { BarChart, ColumnChart } from "react-chartkick";
 import "chart.js";
 import { colors } from "tailwindcss/defaultTheme";
 
@@ -11,6 +11,7 @@ import countedStats from "../../data/counted_stats.json";
 import returningMembers from "../../data/returning_members.json";
 import studentCoachConversion from "../../data/student_to_coach_conversion.json";
 import attendedPerYear from "../../data/attended_per_year.json";
+import newSignUpsPerYear from "../../data/new_signups.json";
 
 type Data = {
   coach_count: number;
@@ -41,6 +42,23 @@ const attendedPerYearChart = [
     data: attendedPerYear.map(({ coaches, year }) => [
       year.toString(),
       coaches,
+    ]),
+  },
+];
+
+const newSignUpsPerYeaChart = [
+  {
+    name: "Students",
+    data: newSignUpsPerYear.map(({ studentcount, year }) => [
+      year.toString(),
+      studentcount,
+    ]),
+  },
+  {
+    name: "Coaches",
+    data: newSignUpsPerYear.map(({ coachcount, year }) => [
+      year.toString(),
+      coachcount,
     ]),
   },
 ];
@@ -88,11 +106,11 @@ function IndexPage() {
       />
 
       <section>
+        <h1>codebar Overview</h1>
         <p className="text-sm font-semibold text-gray-800">
           Last updated:{" "}
           {new Date(lastUpdateAt.last_updated_at).toLocaleDateString()}
         </p>
-        <h1>Overview</h1>
         <dl className="grid sm:grid-cols-3 gap-6">
           {dataDisplay.map((item) => (
             <div key={item.property}>
@@ -105,16 +123,27 @@ function IndexPage() {
             </div>
           ))}
         </dl>
-        <h1>Workshop attendances per year</h1>
+        <h1>Workshops</h1>
+        <h3>Workshop attendances per year</h3>
         <div className="space-y-12">
           <BarChart
             data={attendedPerYearChart}
             stacked
             colors={[colors.blue["500"], colors.pink["600"]]}
           />
+          <h3>Workshop growth</h3>
           <Table
             headers={["Year", "Attendances", "Growth %"]}
             rows={attendedPerYearTable}
+          />
+        </div>
+        <h1>Members</h1>
+        <h3>New signups per year</h3>
+        <div className="space-y-12">
+          <ColumnChart
+            data={newSignUpsPerYeaChart}
+            stacked
+            colors={[colors.blue["500"], colors.pink["600"]]}
           />
         </div>
       </section>

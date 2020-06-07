@@ -5,7 +5,7 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `codebar stats`,
+    title: `codebar Stats`,
     description: `Statistics for codebar`,
     author: `@AlexKeliris`,
   },
