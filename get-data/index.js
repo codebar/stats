@@ -93,6 +93,16 @@ async function main() {
 
     await saveData("new_signups.json", new_signups_per_year);
 
+    /**
+     * Display feedback, sepraterd per rating and year
+     * @type Array<{ year: int, rating: int, count: int }>
+     */
+    const ratings_per_year = await run_query("./ratings_per_year.sql");
+
+    await saveData("ratings_per_year.json", ratings_per_year);
+
+    console.log({ratings_per_year});
+
     await saveData("last_updated_at.json", { last_updated_at: new Date() });
 
     process.exit(0);

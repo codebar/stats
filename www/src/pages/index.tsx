@@ -13,6 +13,7 @@ import studentCoachConversion from "../../data/student_to_coach_conversion.json"
 import attendedPerYear from "../../data/attended_per_year.json";
 import newSignUpsPerYear from "../../data/new_signups.json";
 import workshopsPerYear from "../../data/workshops_per_year.json";
+import ratingsPerYear from "../../data/ratings_per_year.json";
 
 type Data = {
   coach_count: number;
@@ -64,6 +65,21 @@ const newSignUpsPerYearChart = [
       coachcount,
     ]),
   },
+];
+
+const ratingSet = (data, rating) => ({
+  name: rating,
+  data: ratingsPerYear
+    .filter((c) => c.rating === rating)
+    .map(({ year, count }) => [year, count]),
+});
+
+const ratingsPerYearChart = [
+  ratingSet(ratingsPerYear, 1),
+  ratingSet(ratingsPerYear, 2),
+  ratingSet(ratingsPerYear, 3),
+  ratingSet(ratingsPerYear, 4),
+  ratingSet(ratingsPerYear, 5),
 ];
 
 const workshopsPerYearChart = [
@@ -206,6 +222,20 @@ function IndexPage() {
             data={newSignUpsPerYearChart}
             stacked
             colors={[colors.blue["500"], colors.pink["600"]]}
+          />
+        </div>
+        <h1>Feedback</h1>
+        <div className="space-y-12">
+          <BarChart
+            data={ratingsPerYearChart}
+            stacked
+            colors={[
+              colors.red["600"],
+              colors.orange["600"],
+              colors.yellow["600"],
+              colors.blue["600"],
+              colors.pink["600"],
+            ]}
           />
         </div>
       </section>
