@@ -101,7 +101,13 @@ async function main() {
 
     await saveData("ratings_per_year.json", ratings_per_year);
 
-    console.log({ratings_per_year});
+    /**
+     * Average rating per month
+     * @type Array<{ month: int, year: int, avg: int }>
+     */
+    const average_rating_per_month = await run_query("./average_rating_per_month.sql");
+
+    await saveData("average_rating_per_month.json", average_rating_per_month);
 
     await saveData("last_updated_at.json", { last_updated_at: new Date() });
 

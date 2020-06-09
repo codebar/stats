@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart, ColumnChart } from "react-chartkick";
+import { BarChart, ColumnChart, LineChart } from "react-chartkick";
 import "chart.js";
 import { colors } from "tailwindcss/defaultTheme";
 
@@ -14,6 +14,8 @@ import attendedPerYear from "../../data/attended_per_year.json";
 import newSignUpsPerYear from "../../data/new_signups.json";
 import workshopsPerYear from "../../data/workshops_per_year.json";
 import ratingsPerYear from "../../data/ratings_per_year.json";
+import ratingsPerMonth from "../../data/ratings_per_year.json";
+import averageRatingsPerMonth from "../../data/average_rating.json";
 
 type Data = {
   coach_count: number;
@@ -80,6 +82,16 @@ const ratingsPerYearChart = [
   ratingSet(ratingsPerYear, 3),
   ratingSet(ratingsPerYear, 4),
   ratingSet(ratingsPerYear, 5),
+];
+
+const averageRatingChart = [
+  {
+    name: "Average rating",
+    data: averageRatingsPerMonth.map(({ month, year, avg }) => [
+      new Date(year, month, 17),
+      avg,
+    ]),
+  },
 ];
 
 const workshopsPerYearChart = [
@@ -225,7 +237,8 @@ function IndexPage() {
           />
         </div>
         <h1>Feedback</h1>
-        <div className="space-y-12">
+        <div className="space-y-12 mb-12">
+          <h3>Ratings per year</h3>
           <BarChart
             data={ratingsPerYearChart}
             stacked
@@ -237,6 +250,10 @@ function IndexPage() {
               colors.pink["600"],
             ]}
           />
+        </div>
+        <div className="space-y-12">
+          <h3>Average rating</h3>
+          <LineChart data={averageRatingChart} colors={[colors.pink["600"]]} />
         </div>
       </section>
     </Layout>
