@@ -14,7 +14,6 @@ import attendedPerYear from "../../data/attended_per_year.json";
 import newSignUpsPerYear from "../../data/new_signups.json";
 import workshopsPerYear from "../../data/workshops_per_year.json";
 import ratingsPerYear from "../../data/ratings_per_year.json";
-import ratingsPerMonth from "../../data/ratings_per_year.json";
 import averageRatingsPerMonth from "../../data/average_rating.json";
 
 type Data = {
@@ -27,6 +26,7 @@ type Data = {
   percentage_returning: number;
   student_to_coach_conversion: number;
   busiest_month: number;
+  average_rating: number;
 };
 
 const data: Data = {
@@ -69,7 +69,7 @@ const newSignUpsPerYearChart = [
   },
 ];
 
-const ratingSet = (data, rating) => ({
+const ratingSet = (_data: any, rating: number) => ({
   name: rating,
   data: ratingsPerYear
     .filter((c) => c.rating === rating)
@@ -88,7 +88,7 @@ const averageRatingChart = [
   {
     name: "Average rating",
     data: averageRatingsPerMonth.map(({ month, year, avg }) => [
-      new Date(year, month, 17),
+      new Date(year, month),
       avg,
     ]),
   },
@@ -253,7 +253,24 @@ function IndexPage() {
         </div>
         <div className="space-y-12">
           <h3>Average rating</h3>
-          <LineChart data={averageRatingChart} colors={[colors.pink["600"]]} />
+          <div className="flex">
+            <div className="flex-grow bg-gray-200 px-4 py-2 m-2">
+              <LineChart
+                data={averageRatingChart}
+                colors={[colors.pink["600"]]}
+              />
+            </div>
+            <dl className="grid sm:grid-cols-1 gap-6 m-2 text-center items-center">
+              <div>
+                <dd className="text-3xl font-extrabold leading-none text-blue-500">
+                  {countedStats.average_rating.toFixed(1)}
+                </dd>
+                <dt className="mt-2 font-medium text-gray-700 leading-6">
+                  Average rating
+                </dt>
+              </div>
+            </dl>
+          </div>
         </div>
       </section>
     </Layout>
