@@ -21,7 +21,7 @@ function Header() {
             <img
               alt="icon"
               className="w-16 h-16 mr-2 "
-              src={require("../images/code-bar-icon.png")}
+              src={require("../images/codebar-icon.png")}
             />
             <span className="text-xl font-bold tracking-tight ">
               {site.siteMetadata.title}

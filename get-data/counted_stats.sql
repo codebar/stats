@@ -47,6 +47,11 @@ WITH coach_count AS (
   ORDER BY count ASC limit 1
 )
 
+, average_rating AS (
+  SELECT avg(feedbacks.rating)
+  FROM feedbacks
+)
+
 SELECT
     coach_count.count AS coach_count
     , student_count.count AS student_count
@@ -56,6 +61,7 @@ SELECT
     , events_count.count AS events_count
     , busiest_month.month AS busiest_month
     , slowest_month.month AS slowest_month
+    , average_rating.avg AS average_rating
 
 FROM
     coach_count
@@ -65,4 +71,5 @@ FROM
     , monthlies_count
     , events_count
     , busiest_month
-    , slowest_month;
+    , slowest_month
+    , average_rating;

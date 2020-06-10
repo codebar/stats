@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart, ColumnChart } from "react-chartkick";
+import { BarChart, ColumnChart, LineChart } from "react-chartkick";
 import "chart.js";
 import { colors } from "tailwindcss/defaultTheme";
 
@@ -13,6 +13,8 @@ import studentCoachConversion from "../../data/student_to_coach_conversion.json"
 import attendedPerYear from "../../data/attended_per_year.json";
 import newSignUpsPerYear from "../../data/new_signups.json";
 import workshopsPerYear from "../../data/workshops_per_year.json";
+import ratingsPerYear from "../../data/ratings_per_year.json";
+import averageRatingsPerMonth from "../../data/average_rating.json";
 
 type Data = {
   coach_count: number;
@@ -24,6 +26,7 @@ type Data = {
   percentage_returning: number;
   student_to_coach_conversion: number;
   busiest_month: number;
+  average_rating: number;
 };
 
 const data: Data = {
@@ -62,6 +65,31 @@ const newSignUpsPerYearChart = [
     data: newSignUpsPerYear.map(({ coachcount, year }) => [
       year.toString(),
       coachcount,
+    ]),
+  },
+];
+
+const ratingSet = (_data: any, rating: number) => ({
+  name: rating,
+  data: ratingsPerYear
+    .filter((c) => c.rating === rating)
+    .map(({ year, count }) => [year, count]),
+});
+
+const ratingsPerYearChart = [
+  ratingSet(ratingsPerYear, 1),
+  ratingSet(ratingsPerYear, 2),
+  ratingSet(ratingsPerYear, 3),
+  ratingSet(ratingsPerYear, 4),
+  ratingSet(ratingsPerYear, 5),
+];
+
+const averageRatingChart = [
+  {
+    name: "Average rating",
+    data: averageRatingsPerMonth.map(({ month, year, avg }) => [
+      new Date(year, month),
+      avg,
     ]),
   },
 ];
@@ -207,6 +235,42 @@ function IndexPage() {
             stacked
             colors={[colors.blue["500"], colors.pink["600"]]}
           />
+        </div>
+        <h1>Feedback</h1>
+        <div className="space-y-12 mb-12">
+          <h3>Ratings per year</h3>
+          <BarChart
+            data={ratingsPerYearChart}
+            stacked
+            colors={[
+              colors.red["600"],
+              colors.orange["600"],
+              colors.yellow["600"],
+              colors.blue["600"],
+              colors.pink["600"],
+            ]}
+          />
+        </div>
+        <div className="space-y-12">
+          <h3>Average rating</h3>
+          <div className="flex">
+            <div className="flex-grow bg-gray-200 px-4 py-2 m-2">
+              <LineChart
+                data={averageRatingChart}
+                colors={[colors.pink["600"]]}
+              />
+            </div>
+            <dl className="grid sm:grid-cols-1 gap-6 m-2 text-center items-center">
+              <div>
+                <dd className="text-3xl font-extrabold leading-none text-blue-500">
+                  {countedStats.average_rating.toFixed(1)}
+                </dd>
+                <dt className="mt-2 font-medium text-gray-700 leading-6">
+                  Average rating
+                </dt>
+              </div>
+            </dl>
+          </div>
         </div>
       </section>
     </Layout>
