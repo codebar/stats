@@ -1,37 +1,37 @@
 [
   {
     "coachcount": 203,
-    "studentcount": 464,
+    "studentcount": 463,
     "year": 2014
   },
   {
-    "coachcount": 215,
+    "coachcount": 214,
     "studentcount": 711,
     "year": 2015
   },
   {
-    "coachcount": 417,
-    "studentcount": 813,
+    "coachcount": 416,
+    "studentcount": 812,
     "year": 2016
   },
   {
-    "coachcount": 615,
+    "coachcount": 614,
     "studentcount": 1509,
     "year": 2017
   },
   {
-    "coachcount": 997,
-    "studentcount": 2407,
+    "coachcount": 993,
+    "studentcount": 2405,
     "year": 2018
   },
   {
-    "coachcount": 1203,
-    "studentcount": 2869,
+    "coachcount": 1200,
+    "studentcount": 2868,
     "year": 2019
   },
   {
-    "coachcount": 375,
-    "studentcount": 878,
+    "coachcount": 406,
+    "studentcount": 917,
     "year": 2020
   }
 ]
