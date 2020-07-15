@@ -146,12 +146,22 @@
   },
   {
     "year": 2020,
+    "rating": 1,
+    "count": 1
+  },
+  {
+    "year": 2020,
+    "rating": 3,
+    "count": 6
+  },
+  {
+    "year": 2020,
     "rating": 4,
-    "count": 7
+    "count": 21
   },
   {
     "year": 2020,
     "rating": 5,
-    "count": 41
+    "count": 109
   }
 ]
