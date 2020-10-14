@@ -13,13 +13,39 @@ function AboutPage() {
       />
 
       <section className="flex flex-col items-center md:flex-row">
-        <div className="md:w-2/3 md:mr-8">
+        <div className="md:mr-8">
+          <p className="b">
+            <b>Who are we?</b>
+          </p>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
+            codebar drives diversity in the tech industry by enabling minority
+            group members to learn programming in a safe, supportive and
+            non-judgmental environment.
+          </p>
+          <p>
+            We help them build upon their programming skills and increase
+            employability, helping them to pursue a career in technology.
+          </p>
+          <p className="b">
+            <b>What do we do?</b>
+          </p>
+          <p>
+            We organise and facilitate free programming workshops for minority
+            group members in 28 cities around the world including London,
+            Bristol, Brighton, Cambridge, Manchester, Edinburgh, Berlin,
+            Barcelona, Sydney and New York City. The full list of chapters can
+            be found on our homepage - codebar.io
+          </p>
+          <p>
+            We also run one-off events that focus on topics such as contributing
+            to Open Source Software, mindful code, CV reviews, practise
+            interviews and panels focused on getting started in the tech
+            industry, and more.
+          </p>
+          <p>
+            Whenever we can, we also offer opportunities to our students to
+            attend leading programming conferences so they can build upon their
+            skills and network with like-minded people.
           </p>
         </div>
       </section>
