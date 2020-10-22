@@ -1,4 +1,4 @@
-# Codebar Stats
+codebar Stats
 
 This repository is the static Gatsby website for Codebar.
 
