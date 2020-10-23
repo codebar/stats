@@ -11,27 +11,27 @@
   },
   {
     "coachcount": 411,
-    "studentcount": 803,
+    "studentcount": 801,
     "year": 2016
   },
   {
     "coachcount": 598,
-    "studentcount": 1484,
+    "studentcount": 1481,
     "year": 2017
   },
   {
-    "coachcount": 975,
-    "studentcount": 2370,
+    "coachcount": 974,
+    "studentcount": 2367,
     "year": 2018
   },
   {
-    "coachcount": 1184,
-    "studentcount": 2842,
+    "coachcount": 1180,
+    "studentcount": 2836,
     "year": 2019
   },
   {
-    "coachcount": 566,
-    "studentcount": 1291,
+    "coachcount": 577,
+    "studentcount": 1323,
     "year": 2020
   }
 ]
