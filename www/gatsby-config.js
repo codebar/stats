@@ -36,6 +36,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `UA-45126617-3`,
+      },
+    },
     `gatsby-plugin-offline`,
   ],
 };
