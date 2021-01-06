@@ -35,8 +35,18 @@
     "year": 2019
   },
   {
-    "students": 3139,
-    "coaches": 2072,
+    "students": 3136,
+    "coaches": 2074,
     "year": 2020
+  },
+  {
+    "students": 1647,
+    "coaches": 1268,
+    "year": 2021
+  },
+  {
+    "students": 740,
+    "coaches": 585,
+    "year": 2022
   }
 ]
