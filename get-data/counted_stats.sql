@@ -3,7 +3,7 @@ WITH coach_count AS (
     JOIN subscriptions ON subscriptions.member_id = members.id
     JOIN groups ON groups.id = subscriptions.group_id
     JOIN chapters ON chapters.id = groups.chapter_id
-    WHERE groups.name = 'Coaches' AND chapters.active IS TRUE
+    WHERE groups.name = 'Coaches'
 )
 
 , student_count AS (
@@ -11,7 +11,7 @@ WITH coach_count AS (
     JOIN subscriptions ON subscriptions.member_id = members.id
     JOIN groups ON groups.id = subscriptions.group_id
     JOIN chapters ON chapters.id = groups.chapter_id
-    WHERE groups.name = 'Students' AND chapters.active IS TRUE
+    WHERE groups.name = 'Students'
 )
 
 , chapter_count AS (
