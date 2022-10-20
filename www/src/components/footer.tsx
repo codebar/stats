@@ -5,8 +5,13 @@ function Footer() {
   const year = newDate.getFullYear();
   return (
     <footer className="flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8 text-center">
-      <div className="border-4 border-blue-300 mb-12 py-16">
-        <p className="text-lg text-gray-700 pb-1">
+      <div className="border-4 border-blue-300 mb-12 pb-10">
+        <img
+          alt="codebar workshop"
+          className="pt-10 px-10"
+          src={require("../images/workshop.jpg")}
+        />
+        <p className="text-lg text-gray-700 py-2">
           Looking for a way to support codebar? Please consider making a
           donation
         </p>

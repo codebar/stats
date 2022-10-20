@@ -69,6 +69,7 @@ const newSignUpsPerYearChart = [
   },
 ];
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ratingSet = (_data: any, rating: number) => ({
   name: rating,
   data: ratingsPerYear
