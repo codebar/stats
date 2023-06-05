@@ -216,8 +216,13 @@
   },
   {
     "year": 2023,
+    "rating": 1,
+    "count": 3
+  },
+  {
+    "year": 2023,
     "rating": 2,
-    "count": 2
+    "count": 3
   },
   {
     "year": 2023,
@@ -227,11 +232,11 @@
   {
     "year": 2023,
     "rating": 4,
-    "count": 7
+    "count": 19
   },
   {
     "year": 2023,
     "rating": 5,
-    "count": 135
+    "count": 233
   }
 ]

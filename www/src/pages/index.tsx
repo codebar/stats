@@ -3,7 +3,6 @@ import { BarChart, ColumnChart, LineChart } from "react-chartkick";
 import "chart.js";
 import { colors } from "tailwindcss/defaultTheme";
 
-import { Table } from "../components/table";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import lastUpdateAt from "../../data/last_updated_at.json";
@@ -102,21 +101,21 @@ const workshopsPerYearChart = [
   },
 ];
 
-const attendedPerYearTable: string[][] = attendedPerYear
-  .slice(0)
-  .map((item, i) => {
-    const previousYear = attendedPerYear[i - 1] || {};
+// const attendedPerYearTable: string[][] = attendedPerYear
+//   .slice(0)
+//   .map((item, i) => {
+//     const previousYear = attendedPerYear[i - 1] || {};
 
-    const currentYearAttending = item.coaches + item.students;
-    const previousYearAttending = previousYear.coaches + previousYear.students;
-    const percentageChange =
-      (currentYearAttending / previousYearAttending) * 100 - 100;
-    return [
-      item.year,
-      item.coaches + item.students,
-      (percentageChange || 0).toFixed(2),
-    ].map((item) => item.toString());
-  });
+//     const currentYearAttending = item.coaches + item.students;
+//     const previousYearAttending = previousYear.coaches + previousYear.students;
+//     const percentageChange =
+//       (currentYearAttending / previousYearAttending) * 100 - 100;
+//     return [
+//       item.year,
+//       item.coaches + item.students,
+//       (percentageChange || 0).toFixed(2),
+//     ].map((item) => item.toString());
+//   });
 
 const dataDisplay = [
   { property: "coach_count", title: "Coaches" },
@@ -222,11 +221,11 @@ function IndexPage() {
             stacked
             colors={[colors.blue["500"], colors.pink["600"]]}
           />
-          <h3>Workshop growth</h3>
+          {/* <h3>Workshop growth</h3>
           <Table
             headers={["Year", "Attendances", "Growth %"]}
             rows={attendedPerYearTable}
-          />
+          /> */}
         </div>
         <h1>Members</h1>
         <h3>New members per year</h3>
