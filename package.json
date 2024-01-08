@@ -11,6 +11,9 @@
     "www",
     "get-data"
   ],
+  "resolutions": {
+    "sharp" : "^0.29.0"
+  },
   "dependencies": {
     "gatsby-plugin-gtag": "^1.0.13"
   }

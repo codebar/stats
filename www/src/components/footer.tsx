@@ -1,4 +1,5 @@
 import React from "react";
+import groupPhoto from "../images/workshop.jpg";
 
 function Footer() {
   const newDate = new Date();
@@ -9,7 +10,7 @@ function Footer() {
         <img
           alt="codebar workshop"
           className="pt-10 px-10"
-          src={require("../images/workshop.jpg")}
+          src={groupPhoto}
         />
         <p className="text-lg text-gray-700 py-2">
           Looking for a way to support codebar? Please consider making a

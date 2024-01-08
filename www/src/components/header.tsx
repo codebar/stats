@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
+import logoImage from "../images/codebar-icon.png";
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -21,7 +22,7 @@ function Header() {
             <img
               alt="icon"
               className="w-16 h-16 mr-2 "
-              src={require("../images/codebar-icon.png")}
+              src={logoImage}
             />
             <span className="text-xl font-bold tracking-tight ">
               {site.siteMetadata.title}
