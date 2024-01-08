@@ -12,7 +12,7 @@ function SEO({
   lang?: string;
   keywords?: string[];
   title: string;
-}) {
+}): JSX.Element {
   const { site } = useStaticQuery(graphql`
     query DefaultSEOQuery {
       site {

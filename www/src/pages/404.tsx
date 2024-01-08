@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import abductionIllustration from "../images/abduction-illustration.svg";
 
-function NotFoundPage() {
+function NotFoundPage(): JSX.Element {
   return (
     <Layout>
       <SEO description="Page not found" title="404: Not found" />

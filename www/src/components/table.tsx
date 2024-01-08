@@ -6,7 +6,7 @@ export const Table = ({
 }: {
   headers: string[];
   rows: Array<Array<string>>;
-}) => (
+}): JSX.Element => (
   <div className="flex flex-col">
     <div className="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
       <div className="inline-block min-w-full overflow-hidden align-middle border border-gray-200 shadow sm:rounded-lg">

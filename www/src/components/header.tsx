@@ -1,7 +1,8 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
+import logoImage from "../images/codebar-icon.png";
 
-function Header() {
+function Header(): JSX.Element {
   const [isExpanded, toggleExpansion] = useState(false);
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -18,11 +19,7 @@ function Header() {
       <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-4">
         <Link to="/">
           <h1 className="flex items-center no-underline text-blue-600">
-            <img
-              alt="icon"
-              className="w-16 h-16 mr-2 "
-              src={require("../images/codebar-icon.png")}
-            />
+            <img alt="icon" className="w-16 h-16 mr-2 " src={logoImage} />
             <span className="text-xl font-bold tracking-tight ">
               {site.siteMetadata.title}
             </span>

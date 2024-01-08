@@ -5,7 +5,7 @@
   "author": "Alexander Keliris <alex@keliris.com>",
   "dependencies": {
     "chart.js": "^2.9.3",
-    "gatsby": "2.21.22",
+    "gatsby": "3",
     "gatsby-plugin-manifest": "2.4.2",
     "gatsby-plugin-offline": "3.2.1",
     "gatsby-plugin-postcss": "2.3.1",
@@ -56,6 +56,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/codebar/stats-api"
+  },
+  "resolutions": {
+    "sharp": "^0.29.0"
   },
   "bugs": {
     "url": "https://github.com/codebar/stats-api"

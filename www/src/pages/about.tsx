@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-function AboutPage() {
+function AboutPage(): JSX.Element {
   return (
     <Layout>
       <SEO

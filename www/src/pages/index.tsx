@@ -143,7 +143,7 @@ const monthMap = new Map([
   [12, "Dec 🎄"],
 ]);
 
-function IndexPage() {
+function IndexPage(): JSX.Element {
   return (
     <Layout>
       <SEO
