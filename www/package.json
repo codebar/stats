@@ -37,8 +37,8 @@
   "devDependencies": {
     "@tailwindcss/custom-forms": "0.2.1",
     "@types/react-helmet": "^6.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
     "autoprefixer": "9.7.6",
     "babel-eslint": "10.1.0",
     "cssnano": "4.1.10",
