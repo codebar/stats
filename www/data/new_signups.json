@@ -1,52 +1,57 @@
 [
   {
-    "coachcount": 156,
-    "studentcount": 398,
+    "coachcount": 152,
+    "studentcount": 389,
     "year": 2014
   },
   {
-    "coachcount": 172,
-    "studentcount": 620,
+    "coachcount": 166,
+    "studentcount": 594,
     "year": 2015
   },
   {
-    "coachcount": 330,
-    "studentcount": 686,
+    "coachcount": 317,
+    "studentcount": 659,
     "year": 2016
   },
   {
-    "coachcount": 466,
-    "studentcount": 1239,
+    "coachcount": 446,
+    "studentcount": 1176,
     "year": 2017
   },
   {
-    "coachcount": 779,
-    "studentcount": 1954,
+    "coachcount": 740,
+    "studentcount": 1876,
     "year": 2018
   },
   {
-    "coachcount": 905,
-    "studentcount": 2349,
+    "coachcount": 855,
+    "studentcount": 2257,
     "year": 2019
   },
   {
-    "coachcount": 512,
-    "studentcount": 1218,
+    "coachcount": 484,
+    "studentcount": 1170,
     "year": 2020
   },
   {
-    "coachcount": 310,
-    "studentcount": 897,
+    "coachcount": 284,
+    "studentcount": 862,
     "year": 2021
   },
   {
-    "coachcount": 467,
-    "studentcount": 1308,
+    "coachcount": 437,
+    "studentcount": 1246,
     "year": 2022
   },
   {
-    "coachcount": 641,
-    "studentcount": 1663,
+    "coachcount": 606,
+    "studentcount": 1580,
     "year": 2023
+  },
+  {
+    "coachcount": 448,
+    "studentcount": 1134,
+    "year": 2024
   }
 ]
