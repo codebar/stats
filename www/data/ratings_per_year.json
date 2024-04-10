@@ -238,5 +238,20 @@
     "year": 2023,
     "rating": 5,
     "count": 272
+  },
+  {
+    "year": 2024,
+    "rating": 3,
+    "count": 3
+  },
+  {
+    "year": 2024,
+    "rating": 4,
+    "count": 13
+  },
+  {
+    "year": 2024,
+    "rating": 5,
+    "count": 161
   }
 ]
