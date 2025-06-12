@@ -88,7 +88,7 @@ const averageRatingChart = [
   {
     name: "Average rating",
     data: averageRatingsPerMonth.map(({ month, year, avg }) => [
-      new Date(year, month-1),
+      new Date(year, month - 1),
       avg,
     ]),
   },
