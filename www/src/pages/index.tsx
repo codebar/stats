@@ -13,7 +13,7 @@ import attendedPerYear from "../../data/attended_per_year.json";
 import newSignUpsPerYear from "../../data/new_signups.json";
 import workshopsPerYear from "../../data/workshops_per_year.json";
 import ratingsPerYear from "../../data/ratings_per_year.json";
-import averageRatingsPerMonth from "../../data/average_rating.json";
+import averageRatingsPerMonth from "../../data/average_rating_per_month.json";
 
 type Data = {
   coach_count: number;
@@ -88,7 +88,7 @@ const averageRatingChart = [
   {
     name: "Average rating",
     data: averageRatingsPerMonth.map(({ month, year, avg }) => [
-      new Date(year, month),
+      new Date(year, month - 1),
       avg,
     ]),
   },
@@ -258,6 +258,7 @@ function IndexPage(): JSX.Element {
               <LineChart
                 data={averageRatingChart}
                 colors={[colors.pink["600"]]}
+                max={5}
               />
             </div>
             <dl className="grid sm:grid-cols-1 gap-6 m-2 text-center items-center">
