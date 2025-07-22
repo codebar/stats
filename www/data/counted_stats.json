@@ -1,11 +1,11 @@
 {
-  "coach_count": 7130,
-  "student_count": 19712,
+  "coach_count": 7171,
+  "student_count": 19810,
   "chapter_count": 31,
-  "workshop_count": 2344,
+  "workshop_count": 2358,
   "monthlies_count": 51,
-  "events_count": 225,
+  "events_count": 226,
   "busiest_month": 5,
   "slowest_month": 12,
-  "average_rating": 4.771983882436596
+  "average_rating": 4.772124940842404
 }
