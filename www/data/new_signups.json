@@ -1,62 +1,62 @@
 [
   {
     "coachcount": 152,
-    "studentcount": 385,
+    "studentcount": 382,
     "year": 2014
   },
   {
-    "coachcount": 164,
-    "studentcount": 580,
+    "coachcount": 163,
+    "studentcount": 577,
     "year": 2015
   },
   {
-    "coachcount": 314,
-    "studentcount": 643,
+    "coachcount": 311,
+    "studentcount": 639,
     "year": 2016
   },
   {
-    "coachcount": 437,
-    "studentcount": 1153,
+    "coachcount": 433,
+    "studentcount": 1138,
     "year": 2017
   },
   {
-    "coachcount": 727,
-    "studentcount": 1834,
+    "coachcount": 718,
+    "studentcount": 1813,
     "year": 2018
   },
   {
-    "coachcount": 840,
-    "studentcount": 2208,
+    "coachcount": 835,
+    "studentcount": 2186,
     "year": 2019
   },
   {
-    "coachcount": 466,
-    "studentcount": 1139,
+    "coachcount": 457,
+    "studentcount": 1123,
     "year": 2020
   },
   {
-    "coachcount": 267,
-    "studentcount": 841,
+    "coachcount": 260,
+    "studentcount": 821,
     "year": 2021
   },
   {
-    "coachcount": 421,
-    "studentcount": 1210,
+    "coachcount": 416,
+    "studentcount": 1185,
     "year": 2022
   },
   {
-    "coachcount": 580,
-    "studentcount": 1517,
+    "coachcount": 571,
+    "studentcount": 1496,
     "year": 2023
   },
   {
-    "coachcount": 499,
-    "studentcount": 1289,
+    "coachcount": 487,
+    "studentcount": 1258,
     "year": 2024
   },
   {
-    "coachcount": 222,
-    "studentcount": 635,
+    "coachcount": 403,
+    "studentcount": 1067,
     "year": 2025
   }
 ]
