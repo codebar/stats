@@ -215,7 +215,7 @@ function IndexPage(): JSX.Element {
             </dl>
           </div>
 
-          <h3>Workshop attendances per year</h3>
+          <h3>Workshop and Event attendance per year</h3>
           <BarChart
             data={attendedPerYearChart}
             stacked
