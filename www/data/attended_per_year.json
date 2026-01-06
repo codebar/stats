@@ -60,8 +60,13 @@
     "year": 2024
   },
   {
-    "students": 1442,
-    "coaches": 1083,
+    "students": 2090,
+    "coaches": 1283,
     "year": 2025
+  },
+  {
+    "students": 95,
+    "coaches": 106,
+    "year": 2026
   }
 ]
