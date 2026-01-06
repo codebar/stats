@@ -35,28 +35,33 @@
     "year": 2020
   },
   {
-    "coachcount": 260,
+    "coachcount": 259,
     "studentcount": 821,
     "year": 2021
   },
   {
     "coachcount": 416,
-    "studentcount": 1185,
+    "studentcount": 1184,
     "year": 2022
   },
   {
-    "coachcount": 571,
+    "coachcount": 570,
     "studentcount": 1496,
     "year": 2023
   },
   {
     "coachcount": 487,
-    "studentcount": 1258,
+    "studentcount": 1256,
     "year": 2024
   },
   {
     "coachcount": 403,
-    "studentcount": 1067,
+    "studentcount": 1068,
     "year": 2025
+  },
+  {
+    "coachcount": 6,
+    "studentcount": 13,
+    "year": 2026
   }
 ]
