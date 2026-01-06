@@ -273,5 +273,20 @@
     "year": 2025,
     "rating": 5,
     "count": 161
+  },
+  {
+    "year": 2026,
+    "rating": 3,
+    "count": 1
+  },
+  {
+    "year": 2026,
+    "rating": 4,
+    "count": 2
+  },
+  {
+    "year": 2026,
+    "rating": 5,
+    "count": 97
   }
 ]
